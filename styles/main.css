@@ -50,23 +50,13 @@ body {
   background-color: salmon;
   width: var(--container-size);
   margin: 0 auto;
-
-  /* font-size: 0; /*엔터 여백 제거를 위해 */ 
-
-  /* flex container */
-  display: flex;
-  /* flex-direction: row;
-  flex-wrap: wrap; */
-  flex-flow: row wrap;
-  justify-content: space-evenly;
+  display: flow-root;
+  padding: 0 15px;
 }
 
 .group{
-  /* display: inline-block;
-  font-size: 16px; 엔터 여백 제거를 위해 > 복구 */
-
-  /* flex items */
-  display: block;
+  float: left;
+  margin: 0 15px;
 }
 
 .group1{
@@ -80,6 +70,11 @@ body {
 .group3{
   background-color: violet;
   width: 190px;
+}
+
+/* 슬로건 */
+.slogan{
+
 }
 
 /* 푸터 */
