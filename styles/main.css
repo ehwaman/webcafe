@@ -34,12 +34,13 @@ body {
   font-weight: 300;
   line-height: 1.2;
   color: var(--text-color);
-  background-color: var(--bg-color);
+
+  /* background-color: var(--bg-color);
   background-image: url("./../assets/bg/bg_flower.png"), linear-gradient(var(--gray200) 0%, var(--gray100) 30%, var(--white) 60%, var(--white) 100%);
   background-repeat: no-repeat, repeat;
-  background-position: 50% 0, 0 0;
+  background-position: 50% 0, 0 0; */
 
-  /* background: url("./../assets/bg/bg_flower.png") no-repeat 50% 0, linear-gradient(var(--gray200) 0%, var(--gray100) 30%, var(--white) 60%, var(--white) 100%) repeat 0 0, var(--bg-color); */
+  background: url("./../assets/bg/bg_flower.png") no-repeat 50% 0, linear-gradient(var(--gray200) 0%, var(--gray100) 30%, var(--white) 60%, var(--white) 100%) repeat 0 0, var(--bg-color);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -47,6 +48,12 @@ body {
     --text-color: var(--white);
     --bg-color: var(--black);
   }
+}
+
+/* 링크 스타일 */
+a{
+  color: inherit; /* 상속 */
+  text-decoration: none;
 }
 
 /* 레이아웃 */
@@ -66,6 +73,37 @@ body {
 .header{
   background-color: var(--white);
 }
+
+/* 로고 */
+
+/* 안내 링크 */
+.member{
+  --focus-area: 4px;
+  --link-sm-spacing: 4px;
+  --link-md-spacing: 8px;
+
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-end;
+  padding: var(--focus-area) 0;
+  position: relative;
+  right: calc(var(--link-md-spacing) * -1);   /* -8px */
+  
+  li{
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+  }
+  
+  a{
+    padding: var(--link-sm-spacing) var(--link-md-spacing);
+    text-transform: uppercase;
+  }
+}
+
+
+
+/* 메인 메뉴 */
 
 /* 비주얼 */
 .visual{
