@@ -539,9 +539,15 @@ fieldset{
       }
     }
   }
+}
 
+/* 검색 */
+.search-form{
 
+  .search-class{
+    border: 1px solid var(--gray300);
 
+  }
 }
 
 /* 슬로건 */
