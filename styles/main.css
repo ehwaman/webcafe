@@ -726,8 +726,7 @@ fieldset{
   border: 1px solid #aaa;
   border-radius: 5px;
   background: #ccc linear-gradient(#ccc, #eee);
-  padding: 10px;
-  
+   
   [class*="-title"]{
     font-size: 1.5rem;
     font-weight: 700;
@@ -743,6 +742,7 @@ fieldset{
   flex-flow: row wrap;
   justify-content: space-between;
   margin-bottom: 10px;
+  padding: 10px;
 }
 
 .event-button-wrapper{
@@ -781,6 +781,43 @@ fieldset{
   }
 }
 
+.related{
+  --size: 25px;
+  --spacing: 4px;
+  --max-size: 147px;
+  
+  margin: 10px;
+
+  ul{
+    margin-top: 10px;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+    background: #fff;
+    height: var(--size);
+    overflow: hidden;
+    /* transition-property: height, padding, background;
+    transition-duration: 0.4s;
+    transition-delay: 0s, 0.4s, 0.8s; */
+    transition: height 0.4s 0s ease-in-out, padding 0.4s 0.4s ease-in-out, background 0.4s 0.8s ease-in-out;
+
+    li{
+      height: var(--size);
+      line-height: calc(var(--size) - var(--spacing) * 2);
+      padding: var(--spacing);
+
+      a{
+        display: block;
+        text-indent: 1em;
+      }
+    }
+  }
+
+  ul:hover{
+    height: var(--max-size);
+    padding: 10px 0;
+    background: yellow;
+  }
+}
 
 
 
